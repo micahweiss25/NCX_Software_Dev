@@ -17,3 +17,4 @@ def hello():
 @app.route('/users/<name>', methods=['DELETE'])
 def deleteUser(name):
     cursor.execute("DELETE FROM USERS WHERE NAME = " + name + ";")
+    return 200
