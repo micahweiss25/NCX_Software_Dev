@@ -18,3 +18,9 @@ def hello():
 def deleteUser(name):
     cursor.execute("DELETE FROM USERS WHERE NAME = " + name + ";")
     return 200
+
+@app.route('/users/', methods=['POST'])
+def add():
+    name = request.form['nm']
+    phone_number = request.form['pn']
+    return name, phone_number
